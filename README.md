@@ -1,8 +1,3 @@
-Ecommerce store with Firebase Backend
+Ecommece site for an online sneaker company.
 
-Tech Stack:
-
-React
-TypeScript
-Tailwindcss
-Vite
+Built with React, TypeScript, TailwindCSS, Firebase Firestore Database, and Firebase Auth
