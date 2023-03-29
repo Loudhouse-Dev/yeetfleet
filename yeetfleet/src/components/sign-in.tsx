@@ -1,7 +1,10 @@
 import { useState, FormEvent, ChangeEvent } from 'react';
 import FormContainer from './form-container';
 import Button from './button';
-import { signInWithGooglePopup } from '../lib/firebase/firebase.auth';
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from '../lib/firebase/firebase.config';
 import FormInput from './form-input';
 
 const defaultFormFields = {
@@ -36,13 +39,13 @@ const SignInForm = () => {
   };
 
   const logGoogleUser = async () => {
-    const response = await signInWithGooglePopup();
-    console.log(response);
+    const { user } = await signInWithGooglePopup();
+    const userDocRef = await createUserDocumentFromAuth(user);
   };
 
   return (
     <FormContainer>
-      <form onSubmit={handleSubmit}>
+      {/* <form onSubmit={handleSubmit}>
         <FormInput
           name="email"
           label="Email Address"
@@ -65,7 +68,8 @@ const SignInForm = () => {
             Sign In
           </Button>
         </div>
-      </form>
+      </form> */}
+      <button onClick={logGoogleUser}>Log Google User</button>
     </FormContainer>
   );
 };
