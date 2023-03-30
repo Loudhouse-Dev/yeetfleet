@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
+import Home from './routes/home';
 
 function App() {
   return (
