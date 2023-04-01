@@ -44,7 +44,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-function Navigation() {
+const Navigation = () => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -125,4 +125,6 @@ function Navigation() {
       </Transition.Root>
     </div>
   );
-}
+};
+
+export default Navigation;
