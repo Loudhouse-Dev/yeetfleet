@@ -198,7 +198,7 @@ type ProductData = {
   title: string;
 };
 
-export const getCategoriesAndDocuments = async (): Promise<ProductData[]> => {
+export const getProductsAndDocuments = async (): Promise<ProductData[]> => {
   const collectionRef = collection(db, 'products');
   const q = query(collectionRef);
   const querySnapshot = await getDocs(q);

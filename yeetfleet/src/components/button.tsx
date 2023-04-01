@@ -3,24 +3,30 @@ import React, { FC, PropsWithChildren, ButtonHTMLAttributes } from 'react';
 
 const buttonClasses = cva(
   [
-    'rounded-3xl',
-    'font-bold',
-    'hover:scale-110',
-    'active:scale-100',
-    'transition',
+    'flex',
+    'w-full',
+    'justify-center',
+    'text-sm',
+    'rounded-md',
+    'font-semibold',
+    'focus-visible:outline',
+    'focus-visible:outline-2',
+    'focus-visible:outline-offset-2',
+    'focus-visible:outline-indigo-600',
     'duration-200',
-    'ease-in-out',
   ],
   {
     variants: {
       intent: {
         primary: [
-          'bg-violet-500',
+          'bg-sky-400',
+          'bg-sky-600',
           'text-white',
+          'shadow-sm',
           'border-transparent',
-          'hover:bg-violet-600',
+          'hover:bg-sky-600',
         ],
-        secondary: [
+        ghost: [
           'bg-white',
           'text-black',
           'border-gray-400',
@@ -33,7 +39,7 @@ const buttonClasses = cva(
       },
       size: {
         small: ['text-md', 'py-1', 'px-2'],
-        medium: ['text-lg', 'px-6', 'py-2'],
+        medium: ['text-lg', 'px-10', 'py-2'],
         large: ['text-xlg', 'px-8', 'py-4'],
       },
     },
