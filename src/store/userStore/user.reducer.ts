@@ -1,15 +1,5 @@
 import { AnyAction } from 'redux';
-
-import { USER_ACTION_TYPES } from './user.types';
-
-import {
-  signInFailed,
-  signUpFailed,
-  signOutFailed,
-  signOutSuccess,
-  signInSuccess,
-} from './user.actions';
-
+import { createSlice } from '@reduxjs/toolkit';
 import { UserData } from '../../lib/firebase/firebase.config';
 
 export type UserState = {
@@ -24,22 +14,16 @@ const INITIAL_STATE: UserState = {
   error: null,
 };
 
-export const userReducer = (state = INITIAL_STATE, action: AnyAction) => {
-  if (signInSuccess.match(action)) {
-    return { ...state, currentUser: action.payload };
-  }
+export const userSlice = createSlice({
+  name: 'user',
+  initialState: INITIAL_STATE,
+  reducers: {
+    setCurrentUser(state, action) {
+      state.currentUser = action.payload;
+    },
+  },
+});
 
-  if (signOutSuccess.match(action)) {
-    return { ...state, currentUser: null };
-  }
+export const { setCurrentUser } = userSlice.actions;
 
-  if (
-    signInFailed.match(action) ||
-    signUpFailed.match(action) ||
-    signOutFailed.match(action)
-  ) {
-    return { ...state, error: action.payload };
-  }
-
-  return state;
-};
+export const userReducer = userSlice.reducer;

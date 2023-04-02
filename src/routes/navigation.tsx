@@ -7,11 +7,11 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import nikeLogo from 'nike.svg';
-import adidasLogo from 'adidas.svg';
-import jordanLogo from 'jordan.svg';
-import onLogo from 'on.svg';
-import pumaLogo from 'puma.svg';
+import nikeLogo from '../assets/nike.svg';
+import adidasLogo from '../assets/adidas.svg';
+import jordanLogo from '../assets/jordan.svg';
+import onLogo from '../assets/on.svg';
+import pumaLogo from '../assets/puma.svg';
 
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
 

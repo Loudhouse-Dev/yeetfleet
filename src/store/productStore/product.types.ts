@@ -16,7 +16,7 @@ export type ProductItem = {
 
 export type ProductData = {
   products: ProductItem[];
-  title: string;
+  title: any;
 };
 
 export type ProductMap = {

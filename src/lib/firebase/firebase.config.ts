@@ -119,7 +119,7 @@ export const signInAuthUserWithEmailAndPassword = async (
 
 export const createUserDocumentFromAuth = async (
   userAuth: User,
-  additionalData = {} as AdditionalData
+  additionalData: AdditionalData = {} as AdditionalData
 ): Promise<void | QueryDocumentSnapshot<UserData>> => {
   if (!userAuth) return;
 
