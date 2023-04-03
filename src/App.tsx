@@ -7,7 +7,7 @@ import {
 } from '../src/lib/firebase/firebase.config';
 import { setCurrentUser } from '../src/store/userStore/user.reducer';
 import Home from './routes/home';
-import Navigation from './routes/navigation';
+import Navigation from './routes/header';
 import Authentication from './routes/authentication';
 
 function App() {
