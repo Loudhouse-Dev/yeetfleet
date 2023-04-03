@@ -7,7 +7,7 @@ import {
 } from '../src/lib/firebase/firebase.config';
 import { setCurrentUser } from '../src/store/userStore/user.reducer';
 import Home from './routes/home';
-import Navigation from './routes/header';
+import Header from './routes/header';
 import Authentication from './routes/authentication';
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Navigation />}>
+      <Route path="/" element={<Header />}>
         <Route index element={<Home />} />
         <Route path="auth" element={<Authentication />} />
       </Route>
