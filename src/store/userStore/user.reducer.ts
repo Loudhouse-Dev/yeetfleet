@@ -14,6 +14,7 @@ const INITIAL_STATE: UserState = {
   error: null,
 };
 
+/* Creating a slice for the User state. */
 export const userSlice = createSlice({
   name: 'user',
   initialState: INITIAL_STATE,
